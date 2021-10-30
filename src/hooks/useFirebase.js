@@ -14,13 +14,11 @@ const useFirebase = () => {
         setIsLoading(true);
         const googleProvider = new GoogleAuthProvider();
 
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                setUser(result.user);
-            })
-            .finally(() => setIsLoading(false));
+        return signInWithPopup(auth, googleProvider);
+            
+            // .finally(() => setIsLoading(false));
     }
-    console.log(user);
+    console.log(user)
 
     // observe user state change
     useEffect(() => {
