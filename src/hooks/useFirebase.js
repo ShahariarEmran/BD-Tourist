@@ -20,6 +20,7 @@ const useFirebase = () => {
             })
             .finally(() => setIsLoading(false));
     }
+    console.log(user);
 
     // observe user state change
     useEffect(() => {

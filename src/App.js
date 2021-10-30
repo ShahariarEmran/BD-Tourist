@@ -8,10 +8,12 @@ import Home from './components/Home/Home'
 import Login from './components/Login/Login';
 import NotFound from './components/NotFound/NotFound';
 import Services from './components/Services/Services';
+import AuthProvider from './contexts/AuthProvider';
 
 function App() {
   return (
     <div className="App">
+      <AuthProvider>
       <BrowserRouter>
       <Header></Header>
         <Switch>
@@ -36,6 +38,7 @@ function App() {
         </Switch>
         <Footer></Footer>
       </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
