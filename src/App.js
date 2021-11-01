@@ -10,6 +10,7 @@ import Home from './components/Home/Home'
 import Login from './components/Login/Login';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import ManageServices from './components/ManageServices/ManageServices';
+import MyBooking from './components/MyBooking/MyBooking';
 import NotFound from './components/NotFound/NotFound';
 import Services from './components/Services/Services';
 import AuthProvider from './contexts/AuthProvider';
@@ -44,6 +45,9 @@ function App() {
           </PrivateRoute>
           <Route path="/addService">
             <AddService></AddService>
+          </Route>
+          <Route path="/myBooking">
+            <MyBooking></MyBooking>
           </Route>
           <Route path="*">
             <NotFound></NotFound>
