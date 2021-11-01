@@ -9,6 +9,7 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home'
 import Login from './components/Login/Login';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import ManageServices from './components/ManageServices/ManageServices';
 import NotFound from './components/NotFound/NotFound';
 import Services from './components/Services/Services';
 import AuthProvider from './contexts/AuthProvider';
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <Route path="/manage">
+            <ManageServices></ManageServices>
           </Route>
           <Route path="/about">
             <AboutUs></AboutUs>

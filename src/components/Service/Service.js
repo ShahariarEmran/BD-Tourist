@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 import './Service.css';
 
 const Service = ({service}) => {
-    const {name, _id, img, price, short} = service;
+    const {name, _id, img, price, description} = service;
     return (
-        <div className="service pb-3">
+        <div className="container service pb-3">
             <img src={img} height="350px" weigh="525px" alt="" />
             <h2>Visit {name}</h2>
-            <h5 className="px-3">{short}</h5>
-            <h4>Price {price}</h4>
+            <h5 className="px-3">{description}</h5>
+            <h4>Price: {price} BDT</h4>
             <Link to={`/booking/${_id}`}>
-                <button className="btn btn-warning">Click for Visit {name.toLowerCase()}</button>
+                <button className="btn btn-warning">Booking {name.toLowerCase()}</button>
                 </Link>
         </div>
     );

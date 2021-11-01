@@ -1,3 +1,19 @@
+.add-service form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.add-service form input{
+    width: 40%;
+    margin-bottom: 10px;
+}
+.add-service{
+    background-color: whitesmoke;
+    border-radius:20px ;
+}
+
+
 /* Make it responsive */
 @media only screen and (max-width:688px) {
     .service-container{
