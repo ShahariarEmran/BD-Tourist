@@ -7,7 +7,7 @@ import banner3 from '../images/sajek-1.jpg';
 
 const Banner = () => {
     return (
-        <div>
+        <div className="container-fluid">
             <Carousel>
             <Carousel.Item style={{height:"100vh"}}>
                 <img

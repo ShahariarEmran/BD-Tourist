@@ -32,7 +32,7 @@ const Booking = () => {
 
     return (
         <div className="add-service mt-2 mb-5">
-            <img className="mb-2" src={service.img} alt="" /><br />
+            <img className="mb-2" src={service.img} height="300px" weigh="500px" alt="" /><br />
             <h4>Your Booking Name: {service.name}</h4>
             <h6>Your Booking Id: {serviceId}</h6>
     
@@ -42,7 +42,7 @@ const Booking = () => {
             <input {...register("address", { required: true })} placeholder="Address" />
             <input type="number" {...register("Phone", { required: true })} placeholder="Phone" />
             <input type="email" {...register("email", { required: true })} placeholder="Email" />
-            <button className="btn btn-danger" onClick={() => handleSubmit(service._id)}>Place Your Booking</button>
+            <button className="btn btn-danger" onClick={() => handleSubmit(service._id)}>Confirm Your Booking</button>
             
             </form>
 

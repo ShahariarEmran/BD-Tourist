@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './ManageServices.css';
 
 const ManageServices = () => {
     const [services, setServices] = useState([])
@@ -24,22 +25,18 @@ const ManageServices = () => {
             })
     }
     return (
-        <div className="container">
-            <div className="container">
-            <div className="container pb-3">
+        <div className="container-fluid pb-5">
             <h2 className="mt-4">Manage Booking</h2>
             {
-                services.map(service => <div className="container service mt-5 pb-3" key={service._id}>
-                    <img src={service.img}  height="250px" weigh="100px" alt="" />
+                services.map(service => <div className="container service mt-3 pb-3" key={service._id}>
+                    <img className="service-img img-fluid" src={service.img}  alt="" />
                     <h3>{service.name}</h3>
                     <h3>Booking Price: {service.price} BDT</h3>
-                    <h5>{service.description}</h5>
+                    <h5 className="mx">{service.description}</h5>
                     <button className="btn btn-danger" onClick={() => handleDelete(service._id)}>Delete {service.name.toLowerCase()}</button><br />
                 </div>)
             }
             </div>
-        </div>
-        </div>
     );
 };
 

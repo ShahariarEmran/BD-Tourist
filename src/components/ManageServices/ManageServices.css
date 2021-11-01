@@ -1,6 +1,18 @@
 .service{
     background-color: whitesmoke;
     border-radius:20px ;
+    /* margin-left: 100px;
+    margin-right: 100px; */
+    text-align: center;
+}
+.service-img{
+    width: 1000px !important;
+    height: 300px;
+    
+}
+.mx{
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 /* Make it responsive */
