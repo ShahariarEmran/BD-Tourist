@@ -13,9 +13,13 @@ const Booking = () => {
 
     // use axios
     const onSubmit = data => {
+        data.bookingImage = service.img
+        data.bookingName = service.name
+        data.bookingDescription = service.description
+
         console.log(data);
         
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://dry-savannah-25601.herokuapp.com/orders', data)
          .then(res => {
              if(res.data.insertedId){
                  alert('Booking Successfully');
@@ -25,7 +29,7 @@ const Booking = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://dry-savannah-25601.herokuapp.com/service/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data));
     }, [])

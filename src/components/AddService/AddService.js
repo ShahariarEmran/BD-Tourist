@@ -9,7 +9,7 @@ const AddService = () => {
     const onSubmit = data => {
         console.log(data);
         
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://dry-savannah-25601.herokuapp.com/services', data)
          .then(res => {
              if(res.data.insertedId){
                  alert('Added Successfully');
@@ -25,7 +25,7 @@ const AddService = () => {
             <textarea {...register("description")} placeholder="Description" />
             <input type="number" {...register("price")} placeholder="Price" />
             <input {...register("img")} placeholder="Image Url" />
-            <input type="submit" />
+            <input className="btn btn-warning" type="submit" />
             </form><br /><br /><br />
         </div>
     );

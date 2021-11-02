@@ -4,13 +4,13 @@ import './ManageServices.css';
 const ManageServices = () => {
     const [services, setServices] = useState([])
     useEffect( () =>{
-        fetch('http://localhost:5000/services')
+        fetch('https://dry-savannah-25601.herokuapp.com/services')
          .then(res=>res.json())
          .then(data => setServices(data))
     }, []);
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/services/${id}`;
+        const url = `https://dry-savannah-25601.herokuapp.com/services/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
@@ -24,9 +24,10 @@ const ManageServices = () => {
                 }
             })
     }
+    
     return (
         <div className="container-fluid pb-5">
-            <h2 className="mt-4">Manage Booking</h2>
+            <h2 className="mt-4">Manage Services</h2>
             {
                 services.map(service => <div className="container service mt-3 pb-3" key={service._id}>
                     <img className="service-img img-fluid" src={service.img}  alt="" />
