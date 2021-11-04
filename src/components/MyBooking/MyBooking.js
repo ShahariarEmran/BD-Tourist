@@ -8,14 +8,16 @@ import './MyBooking.css';
 
 const MyBooking = () => {
     const {user} = useAuth()
-    console.log(user);
+    console.log(user.email);
     const [orders, setOrders] = useState([])
-    console.log(orders)
+    // console.log(orders)
     useEffect( () =>{
-        fetch(`https://dry-savannah-25601.herokuapp.com/services/${user.email}`)
+        fetch(`https://dry-savannah-25601.herokuapp.com/orders/${user?.email}`)
          .then(res=>res.json())
          .then(data => setOrders(data))
-    }, []);
+    }, [user]);
+    console.log(orders);
+    
 
     // handle delete
     const handleDelete = id => {
@@ -25,9 +27,9 @@ const MyBooking = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 if(data.deletedCount){
-                    alert('Deleted')
+                    alert('Your Booking Canceled')
                     const remaining = orders.filter(order => order._id !== id)
                     setOrders(remaining);
                 }

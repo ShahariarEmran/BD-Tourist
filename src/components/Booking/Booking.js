@@ -35,10 +35,11 @@ const Booking = () => {
     }, [])
 
     return (
-        <div className="add-service mt-2 mb-5">
+        <div className="container add-service mt-2 mb-5">
             <img className="mb-2" src={service.img} height="300px" weigh="500px" alt="" /><br />
-            <h4>Your Booking Name: {service.name}</h4>
-            <h6>Your Booking Id: {serviceId}</h6>
+            <h4>Your Visit Name: {service.name}</h4>
+            {/* <h6>Your Booking Id: {serviceId}</h6> */}
+            <p className="text-center description">{service.description}</p>
     
             <h3 className="text-primary">Please give me your info</h3>
             <form onSubmit={handleSubmit(onSubmit)}>

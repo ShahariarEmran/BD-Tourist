@@ -10,7 +10,8 @@ const ManageServices = () => {
     }, []);
 
     const handleDelete = id => {
-        const url = `https://dry-savannah-25601.herokuapp.com/services/${id}`;
+        console.log('batton clicked', id);
+        const url = `https://dry-savannah-25601.herokuapp.com/delete-services/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
